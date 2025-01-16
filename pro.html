@@ -3,48 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mutacje w raku piersi - PRO</title>
+    <title>Mutacje w raku piersi - Wersja PRO</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Mutacje w raku piersi - Diagnostyka dla profesjonalistów</h1>
-        <p>Wypełnij formularz, aby uzyskać diagnozę w oparciu o Twoje pytania.</p>
+        <h1>Mutacje w raku piersi - Test diagnostyczny (Wersja PRO)</h1>
+        <p>Wypełnij formularz, aby uzyskać dokładną diagnozę. Tylko dla profesjonalistów medycznych.</p>
     </header>
 
     <main>
-        <form id="quizFormPro">
-            <div class="question">
-                <label>1. Czy pacjentka ma historię raka piersi w rodzinie?</label><br>
-                <input type="radio" name="question1" value="yes"> Tak
-                <input type="radio" name="question1" value="no"> Nie
-            </div>
+        <!-- Sekcja weryfikacji kodu dostępu -->
+        <div id="accessCodeSection">
+            <label for="accessCode">Podaj kod dostępu do wersji PRO:</label><br>
+            <input type="password" id="accessCode" name="accessCode" placeholder="Wprowadź kod">
+            <button type="button" onclick="validateCode()">Sprawdź kod</button>
+        </div>
 
-            <div class="question">
-                <label>2. Czy pacjentka była diagnozowana z rakiem piersi w przeszłości?</label><br>
-                <input type="radio" name="question2" value="yes"> Tak
-                <input type="radio" name="question2" value="no"> Nie
-            </div>
-
-            <div class="question">
-                <label>3. Jakie były wyniki poprzednich badań genetycznych?</label><br>
-                <input type="radio" name="question3" value="positive"> Pozytywne
-                <input type="radio" name="question3" value="negative"> Negatywne
-                <input type="radio" name="question3" value="inconclusive"> Niezdecydowane
-            </div>
-
-            <button type="button" onclick="submitQuizPro()">Zatwierdź</button>
-        </form>
-
-        <div id="resultPro"></div>
+        <!-- Sekcja testu diagnostycznego (ukryta do momentu podania prawidłowego hasła) -->
+        <div id="quizSection" style="display: none;">
+            <form id="proQuizForm">
+                <div class="question">
+                    <label>1. Czy pacjent wykonał badania genetyczne na obecność mutacji BRCA1/BRCA2?</label><br>
+                    <input type="radio" name="question1" value="yes"> Tak
+                    <input type="radio" name="question1" value="no"> Nie
+                </div>
+                <div class="question">
+                    <label>2. Jakie objawy wskazują na wysokie ryzyko mutacji genetycznych?</label><br>
+                    <textarea name="question2" rows="3" placeholder="Opisz objawy"></textarea>
+                </div>
+                <div class="question">
+                    <label>3. Jaki rodzaj terapii należy rozważyć na podstawie wyników badań genetycznych?</label><br>
+                    <input type="radio" name="question3" value="chemotherapy"> Chemioterapia
+                    <input type="radio" name="question3" value="surgery"> Chirurgia
+                    <input type="radio" name="question3" value="observation"> Obserwacja
+                </div>
+                <!-- Dodano więcej pytań zgodnie z Twoją prośbą -->
+                <div class="question">
+                    <label>4. Czy pacjent miał w rodzinie przypadki nowotworów piersi lub jajnika?</label><br>
+                    <input type="radio" name="question4" value="yes"> Tak
+                    <input type="radio" name="question4" value="no"> Nie
+                </div>
+                <div class="question">
+                    <label>5. Jakie są wyniki wcześniejszych badań obrazowych?</label><br>
+                    <textarea name="question5" rows="3" placeholder="Opisz wyniki badań"></textarea>
+                </div>
+                <button type="button" onclick="submitProQuiz()">Zatwierdź</button>
+            </form>
+            <div id="proResult"></div>
+        </div>
     </main>
 
     <footer>
         <p>Strona stworzona przez TF. Twoje dane są przechowywane tylko na Twoim urządzeniu.</p>
-        <p><strong>Licencja: <code>TF-HgrT83rkH4tglG</code></strong></p>
-        <p><strong>Spotkania sponsorowane przez TF OS 4.0. Więcej informacji: <a href="https://TFOS.short.gy/start" target="_blank">https://TFOS.short.gy/start</a></strong></p>
+        <p><strong>Licencja prywatna. Proszę skontaktować się z administratorem w celu uzyskania szczegółów.</strong></p>
+        <p><strong>Spotkania sponsorowane przez TF OS 4.0. Więcej informacji dostępnych pod linkiem: <a href="https://TFOS.short.gy/start">https://TFOS.short.gy/start</a></strong></p>
     </footer>
 
-    <script src="scriptPro.js"></script>
+    <script>
+        // Ukryty kod dostępu (nie jest widoczny na stronie)
+        const validCode = "TF-UkrytyKod123";
+
+        function validateCode() {
+            const inputCode = document.getElementById("accessCode").value;
+
+            if (inputCode === validCode) {
+                document.getElementById("quizSection").style.display = "block";
+                document.getElementById("accessCodeSection").style.display = "none";
+            } else {
+                alert("Nieprawidłowy kod dostępu. Proszę spróbować ponownie.");
+            }
+        }
+
+        function submitProQuiz() {
+            document.getElementById("proResult").innerHTML = "Wynik diagnozy i zalecenia zostaną wygenerowane po analizie.";
+        }
+    </script>
 </body>
 </html>
