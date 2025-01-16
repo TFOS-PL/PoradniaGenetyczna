@@ -1,55 +1,74 @@
+/* Ogólny styl strony */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f7fb;
-    color: #333;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
+    background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
+    color: #333;
 }
 
+/* Nagłówek */
 header {
-    background-color: #004080;
+    background: #0288d1;
     color: #fff;
+    padding: 20px 10px;
     text-align: center;
-    padding: 20px;
 }
 
 header h1 {
     margin: 0;
+    font-size: 24px;
 }
 
-header p {
-    margin: 10px 0 0;
-    font-size: 18px;
-}
-
+/* Główna sekcja */
 main {
-    margin: 20px;
     padding: 20px;
-    background-color: #fff;
+    margin: auto;
+    max-width: 800px;
+    background: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Pytania w quizie */
 .question {
-    margin: 15px 0;
+    margin-bottom: 15px;
 }
 
-footer {
-    background-color: #004080;
+.question label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Przyciski */
+button {
+    background: #0288d1;
     color: #fff;
-    text-align: center;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #026ca1;
+}
+
+/* Czat */
+#chatContainer {
+    margin: 20px 0;
+    border: 1px solid #ddd;
     padding: 10px;
-    font-size: 12px;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+    background: #f9f9f9;
 }
 
-footer a {
-    color: #ff9900;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
+/* Stopka */
+footer {
+    text-align: center;
+    background: #0288d1;
+    color: #fff;
+    padding: 10px;
+    font-size: 14px;
 }
