@@ -3,88 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="tf-style.css">
-    <title>PoradniaGenetycznaOnlineTF</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Ocena Ryzyka Raka Piersi</title>
 </head>
 <body>
     <header>
-        <h1>Quiz i Ankieta - Ocena Ryzyka Raka Piersi</h1>
-        <p class="info">
-            Stworzone przez <strong>TF</strong>. Twoje dane są bezpieczne i nie są udostępniane nikomu.  
-            Dowiedz się więcej o naszym nowym systemie:  
-            <a href="https://TFOS.short.gy/start" target="_blank">TF OS 4.0</a>.
-        </p>
+        <h1>Ocena Ryzyka Raka Piersi</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="pro.html">Zaloguj się</a></li> <!-- Nowy link do logowania -->
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <!-- Quiz -->
-        <section id="quiz">
-            <h2>Quiz: Czy jesteś w grupie ryzyka?</h2>
-            <form id="quizForm">
-                <!-- Pytania -->
-                <div class="question">
-                    <p>1. Czy w Twojej rodzinie występowały przypadki raka piersi?</p>
-                    <label><input type="radio" name="q1" value="yes" required> Tak</label>
-                    <label><input type="radio" name="q1" value="no" required> Nie</label>
-                </div>
-
-                <div class="question">
-                    <p>2. Czy odczuwasz nietypowy ból w obrębie piersi?</p>
-                    <label><input type="radio" name="q2" value="yes" required> Tak</label>
-                    <label><input type="radio" name="q2" value="no" required> Nie</label>
-                </div>
-
-                <div class="question">
-                    <p>3. Czy masz mutację genów BRCA1 lub BRCA2?</p>
-                    <label><input type="radio" name="q3" value="yes" required> Tak</label>
-                    <label><input type="radio" name="q3" value="no" required> Nie</label>
-                </div>
-
-                <div class="question">
-                    <p>4. Czy zauważyłaś zmiany w strukturze lub kształcie piersi?</p>
-                    <label><input type="radio" name="q4" value="yes" required> Tak</label>
-                    <label><input type="radio" name="q4" value="no" required> Nie</label>
-                </div>
-
-                <div class="question">
-                    <p>5. Czy masz wyciek z sutka, który nie jest związany z laktacją?</p>
-                    <label><input type="radio" name="q5" value="yes" required> Tak</label>
-                    <label><input type="radio" name="q5" value="no" required> Nie</label>
-                </div>
-
-                <div class="question">
-                    <p>6. Czy w ostatnim czasie zauważyłaś powiększenie węzłów chłonnych w okolicy pachy?</p>
-                    <label><input type="radio" name="q6" value="yes" required> Tak</label>
-                    <label><input type="radio" name="q6" value="no" required> Nie</label>
-                </div>
-
-                <!-- Przycisk -->
-                <button type="button" id="submitQuiz">Zatwierdź</button>
-            </form>
-        </section>
-
-        <!-- Pasek postępu -->
-        <section id="progressSection">
-            <h2>Twój wynik:</h2>
-            <div class="progress-container">
-                <div class="progress-bar"></div>
-            </div>
-            <p id="resultText"></p>
-        </section>
-
-        <!-- Porady -->
-        <section id="advice" style="display: none;">
-            <h2>Porady:</h2>
-            <p id="adviceText"></p>
+        <section>
+            <h2>Witaj w aplikacji do oceny ryzyka raka piersi!</h2>
+            <p>Nasza aplikacja pomoże Ci ocenić ryzyko wystąpienia raka piersi na podstawie wprowadzonych informacji.</p>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 TF. Wszystkie prawa zastrzeżone.  
-           Sprawdź nasz nowy system: <a href="https://TFOS.short.gy/start" target="_blank">TF OS 4.0</a>
-        </p>
+        <p>Stworzone przez firmę <strong>TF</strong>. Twoje dane są bezpieczne i nie są udostępniane nikomu.</p>
+        <p>Licencja: <a href="LICENSE" target="_blank">TF-HgrT83rkH4tglG</a></p>
     </footer>
-
+    
     <script src="script.js"></script>
 </body>
 </html>
