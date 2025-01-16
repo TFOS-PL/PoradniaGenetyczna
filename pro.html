@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mutacje w raku piersi - Wersja PRO</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script> <!-- Dodano defer, aby załadować skrypt po załadowaniu DOM -->
 </head>
 <body>
     <header>
@@ -59,25 +60,5 @@
         <p><strong>Licencja prywatna. Proszę skontaktować się z administratorem w celu uzyskania szczegółów.</strong></p>
         <p><strong>Spotkania sponsorowane przez TF OS 4.0. Więcej informacji dostępnych pod linkiem: <a href="https://TFOS.short.gy/start">https://TFOS.short.gy/start</a></strong></p>
     </footer>
-
-    <script>
-        // Ukryty kod dostępu (nie jest widoczny na stronie)
-        const validCode = "TF-UkrytyKod123";
-
-        function validateCode() {
-            const inputCode = document.getElementById("accessCode").value;
-
-            if (inputCode === validCode) {
-                document.getElementById("quizSection").style.display = "block";
-                document.getElementById("accessCodeSection").style.display = "none";
-            } else {
-                alert("Nieprawidłowy kod dostępu. Proszę spróbować ponownie.");
-            }
-        }
-
-        function submitProQuiz() {
-            document.getElementById("proResult").innerHTML = "Wynik diagnozy i zalecenia zostaną wygenerowane po analizie.";
-        }
-    </script>
 </body>
 </html>
