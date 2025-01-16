@@ -1,0 +1,72 @@
+ /* Podstawowy styl */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
+    color: #0d47a1;
+    margin: 0;
+    padding: 0;
+}
+
+/* Nagłówek */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #0288d1;
+    color: white;
+}
+
+header .info a {
+    color: #ffcc80;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header .info a:hover {
+    text-decoration: underline;
+}
+
+/* Sekcja logowania */
+#loginSection {
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#loginSection input {
+    padding: 10px;
+    width: 80%;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #0288d1;
+}
+
+#loginSection button {
+    background-color: #01579b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#loginSection button:hover {
+    background-color: #0288d1;
+}
+
+/* Sekcja oceny ryzyka */
+#assessmentSection {
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sekcja błędów logowania */
+#loginError {
+    color: red;
+    font-weight: bold;
+}
