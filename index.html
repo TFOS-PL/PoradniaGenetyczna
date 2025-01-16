@@ -3,43 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rodzaje Mutacji w Raku Piersi</title>
+    <title>Mutacje w raku piersi - Poradnik</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Rodzaje Mutacji w Raku Piersi</h1>
-            <p>Wypełnij formularz, aby sprawdzić ryzyko mutacji. Strona została stworzona przez TF. Dane nie są udostępniane nikomu.</p>
-        </header>
+    <header>
+        <h1>Mutacje w raku piersi - Test diagnostyczny</h1>
+        <p>Wypełnij formularz, aby uzyskać poradę diagnostyczną.</p>
+    </header>
 
-        <div class="content">
-            <form action="#">
-                <label for="mutacja1">Czy masz historię raka piersi w rodzinie?</label>
-                <input type="radio" name="mutacja1" value="tak"> Tak
-                <input type="radio" name="mutacja1" value="nie"> Nie
+    <main>
+        <form id="quizForm">
+            <div class="question">
+                <label>1. Czy masz w rodzinie przypadki raka piersi?</label><br>
+                <input type="radio" name="question1" value="yes"> Tak
+                <input type="radio" name="question1" value="no"> Nie
+            </div>
 
-                <label for="mutacja2">Czy wykryto u ciebie mutację w genie BRCA1/BRCA2?</label>
-                <input type="radio" name="mutacja2" value="tak"> Tak
-                <input type="radio" name="mutacja2" value="nie"> Nie
+            <div class="question">
+                <label>2. Czy zauważyłaś zmiany w piersiach, takie jak guzki, wyciek lub ból?</label><br>
+                <input type="radio" name="question2" value="yes"> Tak
+                <input type="radio" name="question2" value="no"> Nie
+            </div>
 
-                <label for="mutacja3">Czy jesteś w grupie podwyższonego ryzyka?</label>
-                <input type="radio" name="mutacja3" value="tak"> Tak
-                <input type="radio" name="mutacja3" value="nie"> Nie
+            <div class="question">
+                <label>3. Jakie jest Twoje obecne zdrowie ogólne?</label><br>
+                <input type="radio" name="question3" value="good"> Dobre
+                <input type="radio" name="question3" value="fair"> Średnie
+                <input type="radio" name="question3" value="poor"> Złe
+            </div>
 
-                <button type="submit">Zatwierdź</button>
-            </form>
+            <button type="button" onclick="submitQuiz()">Zatwierdź</button>
+        </form>
 
-            <!-- Czat Chatango -->
-            <script id="cid0020000398038974069" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 250px;height: 350px;">
-                {"handle":"poradniagenetycznatf","arch":"js","styles":{"a":"ff9900","b":100,"c":"000000","d":"000000","k":"ff9900","l":"ff9900","m":"ff9900","p":"10","q":"ff9900","r":100,"surl":0,"allowpm":0,"fwtickm":1}}
-            </script>
-        </div>
+        <div id="result"></div>
+    </main>
 
-        <footer>
-            <p><strong>Strona stworzona przez TF. Dane nie są udostępniane nikomu. Licencja: <code>TF-HgrT83rkH4tglG</code></strong></p>
-            <p><strong>Spotkania sponsorowane przez TF OS 4.0. Więcej informacji: <a href="https://TFOS.short.gy/start" target="_blank">https://TFOS.short.gy/start</a></strong></p>
-        </footer>
-    </div>
+    <footer>
+        <p>Strona stworzona przez TF. Twoje dane są przechowywane tylko na Twoim urządzeniu.</p>
+        <p><strong>Licencja: <code>TF-HgrT83rkH4tglG</code></strong></p>
+        <p><strong>Spotkania sponsorowane przez TF OS 4.0. Więcej informacji: <a href="https://TFOS.short.gy/start" target="_blank">https://TFOS.short.gy/start</a></strong></p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
