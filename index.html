@@ -3,32 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="license" content="TF-HgrT83rkH4tglG">
+    <meta name="author" content="TF">
+    <meta name="description" content="Poradnia Genetyczna Online, Test Genetyczny">
+    <title>Poradnia Genetyczna - Test Genetyczny</title>
     <link rel="stylesheet" href="style.css">
-    <title>Ocena Ryzyka Raka Piersi</title>
+    <style>
+        /* Dla animacji płynnej jak woda (można rozbudować o animacje wodne) */
+        body {
+            background-color: #b3d9ff;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .question {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .ads {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .ads a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .ads a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Ocena Ryzyka Raka Piersi</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Strona Główna</a></li>
-                <li><a href="pro.html">Zaloguj się</a></li> <!-- Nowy link do logowania -->
-            </ul>
-        </nav>
-    </header>
+    <h1>Poradnia Genetyczna Online</h1>
 
-    <main>
-        <section>
-            <h2>Witaj w aplikacji do oceny ryzyka raka piersi!</h2>
-            <p>Nasza aplikacja pomoże Ci ocenić ryzyko wystąpienia raka piersi na podstawie wprowadzonych informacji.</p>
-        </section>
-    </main>
+    <!-- Reklama nad formularzem -->
+    <div class="ads">
+        <p><strong>Reklama:</strong> Sprawdź nasze usługi genetyczne w Poradni Genetycznej! <a href="https://TFOS.short.gy/start" target="_blank">Kliknij tutaj</a></p>
+    </div>
+
+    <p>Proszę odpowiedzieć na poniższe pytania, aby ocenić ryzyko wystąpienia problemów genetycznych. Na podstawie odpowiedzi udzielimy sugestie, ale prosimy o konsultację z lekarzem w celu postawienia diagnozy.</p>
+    
+    <form id="quizForm">
+        <div class="question">
+            <label for="q1">1. Czy masz historię raka piersi w rodzinie?</label><br>
+            <input type="radio" id="q1yes" name="q1" value="yes"> Tak
+            <input type="radio" id="q1no" name="q1" value="no"> Nie
+        </div>
+
+        <div class="question">
+            <label for="q2">2. Czy kiedykolwiek miałeś problem z guzkiem piersiowym?</label><br>
+            <input type="radio" id="q2yes" name="q2" value="yes"> Tak
+            <input type="radio" id="q2no" name="q2" value="no"> Nie
+        </div>
+
+        <div class="question">
+            <label for="q3">3. Czy doświadczyłeś niepokojących zmian w piersiach?</label><br>
+            <input type="radio" id="q3yes" name="q3" value="yes"> Tak
+            <input type="radio" id="q3no" name="q3" value="no"> Nie
+        </div>
+
+        <button type="button" onclick="submitForm()">Zatwierdź</button>
+    </form>
+
+    <div id="result"></div>
+
+    <!-- Reklama na dole -->
+    <div class="ads">
+        <p><strong>Reklama:</strong> Zdobądź więcej informacji o genetyce i profilaktyce. Sprawdź naszą ofertę! <a href="https://TFOS.short.gy/start" target="_blank">Kliknij tutaj</a></p>
+    </div>
 
     <footer>
-        <p>Stworzone przez firmę <strong>TF</strong>. Twoje dane są bezpieczne i nie są udostępniane nikomu.</p>
-        <p>Licencja: <a href="LICENSE" target="_blank">TF-HgrT83rkH4tglG</a></p>
+        <p><a href="LICENSE.txt" target="_blank">Kliknij tutaj, aby zapoznać się z warunkami licencji</a></p>
     </footer>
-    
-    <script src="script.js"></script>
+
+    <script>
+        function submitForm() {
+            var score = 0;
+            if (document.getElementById('q1yes').checked) score++;
+            if (document.getElementById('q2yes').checked) score++;
+            if (document.getElementById('q3yes').checked) score++;
+
+            var result = document.getElementById("result");
+
+            if (score == 3) {
+                result.textContent = "Zalecamy natychmiastową konsultację z lekarzem. Twoje odpowiedzi wskazują na zwiększone ryzyko.";
+            } else if (score == 2) {
+                result.textContent = "Zalecamy dalsze monitorowanie zdrowia piersi. Skonsultuj się z lekarzem.";
+            } else {
+                result.textContent = "Nie wykryto żadnych większych problemów. Kontynuuj regularne kontrole zdrowia.";
+            }
+        }
+    </script>
 </body>
 </html>
